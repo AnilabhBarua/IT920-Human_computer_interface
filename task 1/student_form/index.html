@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <h2>Student Registration Form</h2>
+
+    
+    
+    </p>
+
+    <form id="studentForm" action="submit.php" method="POST">
+
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="name">Full Name <span>*</span></label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required autocomplete="name"><br><br>
+
+            <label for="roll">Roll Number <span>*</span></label><br>
+            <input type="text" id="roll" name="roll" placeholder="Your unique roll number" required><br><br>
+
+            <label for="email">Email <span>*</span></label><br>
+            <input type="email" id="email" name="email" placeholder="example@domain.com" required autocomplete="email"><br><br>
+
+            <label for="dob">Date of Birth <span>*</span></label><br>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label for="gender">Gender <span>*</span></label><br>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Academic Information</legend>
+
+            <label for="department">Department <span>*</span></label><br>
+            <input type="text" id="department" name="department" placeholder="Your department" required><br><br>
+
+            <label for="course">Course <span>*</span></label><br>
+            <input type="text" id="course" name="course" placeholder="Your enrolled course" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+
+            <label for="contact">Contact Number <span>*</span></label><br>
+            <input type="tel" id="contact" name="contact" placeholder="10-digit number" 
+                   pattern="[0-9]{10}" maxlength="10" required autocomplete="tel"><br><br>
+
+            <label for="address">Address <span>*</span></label><br>
+            <textarea id="address" name="address" placeholder="Your permanent address" rows="3" required></textarea><br><br>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="validation.js"></script>
+
+</body>
+</html>
